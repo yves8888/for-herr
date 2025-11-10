@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You My Love 🌷</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500&display=swap');
+
+    body {
+      background: linear-gradient(135deg, #ffe6f2, #ffd6e8);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: #4b004b;
+      overflow: hidden;
+    }
+
+    img {
+      width: 320px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(255, 182, 193, 0.6);
+      animation: fadeIn 2s ease;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #ff69b4;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.3rem;
+      animation: fadeIn 3s ease;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 10px 0 25px;
+      color: #833f77;
+      animation: fadeIn 4s ease;
+    }
+
+    /* 💗 Cute button design */
+    button {
+      background-color: #ff9dcf;
+      color: white;
+      border: none;
+      padding: 12px 35px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+      transition: all 0.3s ease;
+      animation: fadeIn 5s ease;
+    }
+
+    button:hover {
+      background-color: #ff66b2;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+    }
+
+    /* ✨ Floating petals animation */
+    .petal {
+      position: absolute;
+      background: rgba(255, 192, 203, 0.8);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      animation: fall 10s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <img src="36_Pink_Roses_Bouquet.jpg" alt="Pink Roses Bouquet">
+  <h2>For you my lovee 💐💖</h2>
+  <p>Because you deserve something beautiful  just like you. 🌸</p>
+  
+  <button onclick="goBack()">💖 Back to Home 💖</button>
+
+  <script>
+    function goBack() {
+      window.location.href = "surprise_for_her.html";
+    }
+
+    // 🌷 Floating petal effect
+    for (let i = 0; i < 20; i++) {
+      const petal = document.createElement("div");
+      petal.classList.add("petal");
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDuration = 8 + Math.random() * 5 + "s";
+      petal.style.width = petal.style.height = 8 + Math.random() * 8 + "px";
+      document.body.appendChild(petal);
+    }
+  </script>
+</body>
+</html>
